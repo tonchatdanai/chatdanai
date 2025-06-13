@@ -1,9 +1,74 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แดชบอร์ดข้อมูลนักศึกษา</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    </head>
-    <body>
-        Hello World!!!
-    </body>
+    <div class="dashboard-container">
+        <header>
+            <h1><i class="fa-solid fa-chart-pie"></i> แดชบอร์ดข้อมูลนักศึกษา</h1>
+            <p>สรุปภาพรวมข้อมูลนักศึกษาในมหาวิทยาลัย</p>
+        </header>
+
+        <main>
+            <section class="cards-container">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="card-info">
+                        <h3>15,230</h3>
+                        <p>นักศึกษาทั้งหมด</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-user-plus"></i></div>
+                    <div class="card-info">
+                        <h3>2,150</h3>
+                        <p>นักศึกษาใหม่ปีนี้</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="card-info">
+                        <h3>8</h3>
+                        <p>คณะทั้งหมด</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="card-info">
+                        <h3>3.12</h3>
+                        <p>GPA เฉลี่ย</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="charts-container">
+                <div class="chart-card">
+                    <h4>จำนวนนักศึกษาแยกตามคณะ</h4>
+                    <canvas id="facultyChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h4>สัดส่วนนักศึกษาชาย-หญิง</h4>
+                    <canvas id="genderChart"></canvas>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Dashboard สร้างโดย Gemini &copy; 2025</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+
+</body>
 </html>
